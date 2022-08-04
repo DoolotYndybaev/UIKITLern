@@ -135,14 +135,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwt-dG-YhW">
-                                <rect key="frame" x="20" y="194" width="374" height="21"/>
+                                <rect key="frame" x="20" y="144" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fCg-YH-3nf">
                                 <rect key="frame" x="20" y="431" width="374" height="34"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygk-d8-M8y">
@@ -155,22 +155,32 @@
                                     <action selector="donePressed:" destination="uyZ-zQ-9SB" eventType="touchUpInside" id="Zcv-ma-xYf"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Rx1-sX-wpT">
+                                <rect key="frame" x="0.0" y="195" width="414" height="216"/>
+                                <connections>
+                                    <action selector="changeDate:" destination="uyZ-zQ-9SB" eventType="valueChanged" id="b9W-mg-w56"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ceh-HX-v3G"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
-                            <constraint firstItem="fCg-YH-3nf" firstAttribute="leading" secondItem="ceh-HX-v3G" secondAttribute="leading" constant="20" id="1US-13-sRY"/>
+                            <constraint firstItem="fCg-YH-3nf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ceh-HX-v3G" secondAttribute="leading" constant="20" id="1US-13-sRY"/>
+                            <constraint firstItem="fCg-YH-3nf" firstAttribute="top" secondItem="Rx1-sX-wpT" secondAttribute="bottom" constant="20" id="CSC-VL-n1T"/>
                             <constraint firstItem="fCg-YH-3nf" firstAttribute="centerX" secondItem="MgY-yz-omE" secondAttribute="centerX" id="G7x-8R-tgx"/>
                             <constraint firstItem="fCg-YH-3nf" firstAttribute="centerY" secondItem="MgY-yz-omE" secondAttribute="centerY" id="IIg-kR-dq6"/>
                             <constraint firstItem="ceh-HX-v3G" firstAttribute="trailing" secondItem="fCg-YH-3nf" secondAttribute="trailing" constant="20" id="ItL-lH-sSv"/>
+                            <constraint firstItem="Rx1-sX-wpT" firstAttribute="trailing" secondItem="ceh-HX-v3G" secondAttribute="trailing" id="Kmc-6l-Vke"/>
                             <constraint firstItem="ceh-HX-v3G" firstAttribute="trailing" secondItem="mwt-dG-YhW" secondAttribute="trailing" constant="20" id="My8-Ld-tjY"/>
                             <constraint firstItem="Ygk-d8-M8y" firstAttribute="centerX" secondItem="MgY-yz-omE" secondAttribute="centerX" id="VXv-Qe-19B"/>
-                            <constraint firstItem="mwt-dG-YhW" firstAttribute="top" secondItem="ceh-HX-v3G" secondAttribute="top" constant="150" id="jjL-bF-GCs"/>
+                            <constraint firstItem="Rx1-sX-wpT" firstAttribute="leading" secondItem="ceh-HX-v3G" secondAttribute="leading" id="X6h-gC-U3M"/>
+                            <constraint firstItem="mwt-dG-YhW" firstAttribute="top" secondItem="ceh-HX-v3G" secondAttribute="top" constant="100" id="jjL-bF-GCs"/>
                             <constraint firstItem="mwt-dG-YhW" firstAttribute="leading" secondItem="ceh-HX-v3G" secondAttribute="leading" constant="20" id="tPl-sD-Zd0"/>
                             <constraint firstItem="Ygk-d8-M8y" firstAttribute="top" secondItem="fCg-YH-3nf" secondAttribute="bottom" constant="115" id="uMn-zc-ixF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="Rx1-sX-wpT" id="A8T-Mz-5uc"/>
                         <outlet property="label" destination="mwt-dG-YhW" id="kIC-vl-0ut"/>
                         <outlet property="textField" destination="fCg-YH-3nf" id="hmG-1Y-O4D"/>
                     </connections>
