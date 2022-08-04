@@ -16,6 +16,7 @@ class TextViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textView.text = ""
         textView.delegate = self
         
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
@@ -70,6 +71,6 @@ extension TextViewViewController: UITextViewDelegate {
     }
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         countLabel.text = "\(textView.text.count)"
-        return true
+        return textView.text.count + (text.count - range.length) < 60 || textView.text.count + (text.count - range.length) == 60
     }
 }
