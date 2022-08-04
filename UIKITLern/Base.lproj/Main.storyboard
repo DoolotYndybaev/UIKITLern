@@ -232,10 +232,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="TGt-K6-9Ib">
+                                <rect key="frame" x="300" y="115" width="94" height="32"/>
+                                <connections>
+                                    <action selector="sizeFont:" destination="BDg-R0-Rsj" eventType="valueChanged" id="v1l-ld-nDR"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2ks-Fz-iCk"/>
                         <color key="backgroundColor" red="0.18823529411764706" green="0.91402154611844721" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2ks-Fz-iCk" firstAttribute="trailing" secondItem="TGt-K6-9Ib" secondAttribute="trailing" constant="20" id="3Po-ee-SeL"/>
+                            <constraint firstItem="TGt-K6-9Ib" firstAttribute="top" secondItem="2ks-Fz-iCk" secondAttribute="top" constant="71" id="88D-za-eaC"/>
                             <constraint firstItem="2ks-Fz-iCk" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="CrM-Nm-lu4" secondAttribute="trailing" constant="383" id="EAX-fc-LuC"/>
                             <constraint firstItem="2ks-Fz-iCk" firstAttribute="trailing" secondItem="XPi-Y9-8Mt" secondAttribute="trailing" constant="20" id="FRT-Nz-SbE"/>
                             <constraint firstItem="CrM-Nm-lu4" firstAttribute="leading" secondItem="2ks-Fz-iCk" secondAttribute="leading" constant="20" id="I1z-QC-fid"/>
@@ -249,6 +257,7 @@
                     </view>
                     <connections>
                         <outlet property="countLabel" destination="CrM-Nm-lu4" id="VR4-4h-0QK"/>
+                        <outlet property="stepper" destination="TGt-K6-9Ib" id="JjI-yl-fKG"/>
                         <outlet property="textView" destination="XPi-Y9-8Mt" id="uJm-G3-fER"/>
                         <outlet property="textViewBottomConstraint" destination="xbw-xJ-5ne" id="Mxr-e1-e2p"/>
                     </connections>

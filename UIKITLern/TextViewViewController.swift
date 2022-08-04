@@ -8,6 +8,7 @@
 import UIKit
 
 class TextViewViewController: UIViewController {
+    @IBOutlet weak var stepper: UIStepper!
     
     @IBOutlet weak var textViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var countLabel: UILabel!
@@ -16,7 +17,6 @@ class TextViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textView.text = ""
         textView.delegate = self
         
         textView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
@@ -31,6 +31,13 @@ class TextViewViewController: UIViewController {
                                                selector: #selector(updateTextView(notification:)),
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
+        
+        stepper.value = 17
+        stepper.minimumValue = 10
+        stepper.maximumValue = 25
+        stepper.tintColor = .white
+        stepper.backgroundColor = .gray
+        stepper.layer.cornerRadius = 5
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -58,6 +65,13 @@ class TextViewViewController: UIViewController {
     }
     
     
+    @IBAction func sizeFont(_ sender: UIStepper) {
+        
+        let font = textView.font?.fontName
+        let fontSize = CGFloat(sender.value)
+        
+        textView.font = UIFont(name: font!, size: fontSize)
+    }
 }
 extension TextViewViewController: UITextViewDelegate {
     
