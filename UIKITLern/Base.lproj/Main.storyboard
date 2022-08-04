@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="82"/>
+            <point key="canvasLocation" x="20" y="92"/>
         </scene>
         <!--Segmented Controller-->
         <scene sceneID="R1G-AY-Lv2">
@@ -95,26 +95,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c50-HB-4iU">
+                                <rect key="frame" x="18" y="317" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="gWY-Pf-ByN" eventType="valueChanged" id="Bmf-FI-AaC"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pA2-ZV-SIQ"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
+                            <constraint firstItem="c50-HB-4iU" firstAttribute="top" secondItem="X0m-sp-HSz" secondAttribute="bottom" constant="20" id="153-PK-tzh"/>
                             <constraint firstItem="pA2-ZV-SIQ" firstAttribute="trailing" secondItem="X0m-sp-HSz" secondAttribute="trailing" constant="20" id="7EZ-Cr-unB"/>
                             <constraint firstItem="pA2-ZV-SIQ" firstAttribute="trailing" secondItem="Af1-6f-hd8" secondAttribute="trailing" constant="20" id="Jg1-Lr-0mE"/>
+                            <constraint firstItem="c50-HB-4iU" firstAttribute="leading" secondItem="pA2-ZV-SIQ" secondAttribute="leading" constant="20" id="JqX-T3-Cwd"/>
                             <constraint firstItem="X0m-sp-HSz" firstAttribute="leading" secondItem="pA2-ZV-SIQ" secondAttribute="leading" constant="20" id="PU0-X7-eCU"/>
                             <constraint firstItem="X0m-sp-HSz" firstAttribute="top" secondItem="Af1-6f-hd8" secondAttribute="bottom" constant="71" id="diL-45-E5K"/>
                             <constraint firstItem="Af1-6f-hd8" firstAttribute="top" secondItem="pA2-ZV-SIQ" secondAttribute="top" constant="130" id="nDz-me-WGy"/>
+                            <constraint firstItem="pA2-ZV-SIQ" firstAttribute="trailing" secondItem="c50-HB-4iU" secondAttribute="trailing" constant="20" id="r1X-Dw-qLz"/>
                             <constraint firstItem="Af1-6f-hd8" firstAttribute="leading" secondItem="pA2-ZV-SIQ" secondAttribute="leading" constant="20" id="xIe-zp-eCm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="X0m-sp-HSz" id="zT8-EQ-wR8"/>
                         <outlet property="segmentedControll" destination="Af1-6f-hd8" id="aNf-qo-Fly"/>
+                        <outlet property="slider" destination="c50-HB-4iU" id="QWa-GP-TiQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rs2-Oj-bqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966.66666666666674" y="93.75"/>
+            <point key="canvasLocation" x="786.95652173913049" y="91.741071428571431"/>
         </scene>
     </scenes>
     <resources>
