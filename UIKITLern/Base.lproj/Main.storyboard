@@ -161,27 +161,48 @@
                                     <action selector="changeDate:" destination="uyZ-zQ-9SB" eventType="valueChanged" id="b9W-mg-w56"/>
                                 </connections>
                             </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="heL-pl-GgX">
+                                <rect key="frame" x="345" y="105" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchAction:" destination="uyZ-zQ-9SB" eventType="valueChanged" id="9aY-fu-eNU"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Скрыть все элементы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcd-d0-4WR">
+                                <rect key="frame" x="20" y="110" width="317" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ceh-HX-v3G"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                         <constraints>
                             <constraint firstItem="fCg-YH-3nf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ceh-HX-v3G" secondAttribute="leading" constant="20" id="1US-13-sRY"/>
+                            <constraint firstItem="heL-pl-GgX" firstAttribute="top" secondItem="ceh-HX-v3G" secondAttribute="top" constant="61" id="1VW-R7-5DV"/>
+                            <constraint firstItem="heL-pl-GgX" firstAttribute="leading" secondItem="Jcd-d0-4WR" secondAttribute="trailing" constant="8" symbolic="YES" id="6yp-eV-TYH"/>
+                            <constraint firstItem="mwt-dG-YhW" firstAttribute="top" secondItem="Jcd-d0-4WR" secondAttribute="bottom" constant="13" id="BlF-j3-rBp"/>
                             <constraint firstItem="fCg-YH-3nf" firstAttribute="top" secondItem="Rx1-sX-wpT" secondAttribute="bottom" constant="20" id="CSC-VL-n1T"/>
                             <constraint firstItem="fCg-YH-3nf" firstAttribute="centerX" secondItem="MgY-yz-omE" secondAttribute="centerX" id="G7x-8R-tgx"/>
                             <constraint firstItem="fCg-YH-3nf" firstAttribute="centerY" secondItem="MgY-yz-omE" secondAttribute="centerY" id="IIg-kR-dq6"/>
                             <constraint firstItem="ceh-HX-v3G" firstAttribute="trailing" secondItem="fCg-YH-3nf" secondAttribute="trailing" constant="20" id="ItL-lH-sSv"/>
                             <constraint firstItem="Rx1-sX-wpT" firstAttribute="trailing" secondItem="ceh-HX-v3G" secondAttribute="trailing" id="Kmc-6l-Vke"/>
                             <constraint firstItem="ceh-HX-v3G" firstAttribute="trailing" secondItem="mwt-dG-YhW" secondAttribute="trailing" constant="20" id="My8-Ld-tjY"/>
+                            <constraint firstItem="ceh-HX-v3G" firstAttribute="trailing" secondItem="heL-pl-GgX" secondAttribute="trailing" constant="20" id="Nor-Yb-FHV"/>
+                            <constraint firstItem="Jcd-d0-4WR" firstAttribute="leading" secondItem="ceh-HX-v3G" secondAttribute="leading" constant="20" id="QEa-sQ-Hxw"/>
                             <constraint firstItem="Ygk-d8-M8y" firstAttribute="centerX" secondItem="MgY-yz-omE" secondAttribute="centerX" id="VXv-Qe-19B"/>
                             <constraint firstItem="Rx1-sX-wpT" firstAttribute="leading" secondItem="ceh-HX-v3G" secondAttribute="leading" id="X6h-gC-U3M"/>
                             <constraint firstItem="mwt-dG-YhW" firstAttribute="top" secondItem="ceh-HX-v3G" secondAttribute="top" constant="100" id="jjL-bF-GCs"/>
                             <constraint firstItem="mwt-dG-YhW" firstAttribute="leading" secondItem="ceh-HX-v3G" secondAttribute="leading" constant="20" id="tPl-sD-Zd0"/>
+                            <constraint firstItem="mwt-dG-YhW" firstAttribute="top" secondItem="heL-pl-GgX" secondAttribute="bottom" constant="8" symbolic="YES" id="ttw-Rh-c0K"/>
                             <constraint firstItem="Ygk-d8-M8y" firstAttribute="top" secondItem="fCg-YH-3nf" secondAttribute="bottom" constant="115" id="uMn-zc-ixF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="Rx1-sX-wpT" id="A8T-Mz-5uc"/>
+                        <outlet property="doneButton" destination="Ygk-d8-M8y" id="N9Y-xe-VeC"/>
                         <outlet property="label" destination="mwt-dG-YhW" id="kIC-vl-0ut"/>
+                        <outlet property="switchLabel" destination="Jcd-d0-4WR" id="l1q-yP-CFe"/>
+                        <outlet property="switchOutlet" destination="heL-pl-GgX" id="wlJ-Py-4Ek"/>
                         <outlet property="textField" destination="fCg-YH-3nf" id="hmG-1Y-O4D"/>
                     </connections>
                 </viewController>
