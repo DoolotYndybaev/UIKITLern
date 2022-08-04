@@ -13,6 +13,7 @@
 		B99941A6289B9E2D00AC9716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99941A4289B9E2D00AC9716 /* Main.storyboard */; };
 		B99941A8289B9E3000AC9716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99941A7289B9E3000AC9716 /* Assets.xcassets */; };
 		B99941AB289B9E3000AC9716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99941A9289B9E3000AC9716 /* LaunchScreen.storyboard */; };
+		B99941B3289BAA0A00AC9716 /* UISegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99941B2289BAA0A00AC9716 /* UISegmentedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B99941A7289B9E3000AC9716 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B99941AA289B9E3000AC9716 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B99941AC289B9E3000AC9716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B99941B2289BAA0A00AC9716 /* UISegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				B999419E289B9E2D00AC9716 /* AppDelegate.swift */,
 				B99941A0289B9E2D00AC9716 /* SceneDelegate.swift */,
 				B99941A2289B9E2D00AC9716 /* ButtonLabelViewController.swift */,
+				B99941B2289BAA0A00AC9716 /* UISegmentedController.swift */,
 				B99941A4289B9E2D00AC9716 /* Main.storyboard */,
 				B99941A7289B9E3000AC9716 /* Assets.xcassets */,
 				B99941A9289B9E3000AC9716 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B99941B3289BAA0A00AC9716 /* UISegmentedController.swift in Sources */,
 				B99941A3289B9E2D00AC9716 /* ButtonLabelViewController.swift in Sources */,
 				B999419F289B9E2D00AC9716 /* AppDelegate.swift in Sources */,
 				B99941A1289B9E2D00AC9716 /* SceneDelegate.swift in Sources */,
