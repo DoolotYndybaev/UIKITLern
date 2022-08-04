@@ -15,6 +15,7 @@
 		B99941AB289B9E3000AC9716 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99941A9289B9E3000AC9716 /* LaunchScreen.storyboard */; };
 		B99941B3289BAA0A00AC9716 /* UISegmentedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99941B2289BAA0A00AC9716 /* UISegmentedController.swift */; };
 		B99941B7289BC97400AC9716 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99941B6289BC97400AC9716 /* TextFieldViewController.swift */; };
+		B9A31443289C1B9A00524251 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A31442289C1B9A00524251 /* TextViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B99941AC289B9E3000AC9716 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B99941B2289BAA0A00AC9716 /* UISegmentedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedController.swift; sourceTree = "<group>"; };
 		B99941B6289BC97400AC9716 /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		B9A31442289C1B9A00524251 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				B99941A2289B9E2D00AC9716 /* ButtonLabelViewController.swift */,
 				B99941B2289BAA0A00AC9716 /* UISegmentedController.swift */,
 				B99941B6289BC97400AC9716 /* TextFieldViewController.swift */,
+				B9A31442289C1B9A00524251 /* TextViewViewController.swift */,
 				B99941A4289B9E2D00AC9716 /* Main.storyboard */,
 				B99941A7289B9E3000AC9716 /* Assets.xcassets */,
 				B99941A9289B9E3000AC9716 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				B99941B3289BAA0A00AC9716 /* UISegmentedController.swift in Sources */,
 				B99941A3289B9E2D00AC9716 /* ButtonLabelViewController.swift in Sources */,
 				B999419F289B9E2D00AC9716 /* AppDelegate.swift in Sources */,
+				B9A31443289C1B9A00524251 /* TextViewViewController.swift in Sources */,
 				B99941A1289B9E2D00AC9716 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

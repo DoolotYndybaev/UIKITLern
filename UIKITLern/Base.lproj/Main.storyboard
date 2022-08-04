@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uyZ-zQ-9SB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BDg-R0-Rsj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -210,8 +210,59 @@
             </objects>
             <point key="canvasLocation" x="1579.7101449275362" y="91.741071428571431"/>
         </scene>
+        <!--Text View View Controller-->
+        <scene sceneID="BC0-oQ-1aU">
+            <objects>
+                <viewController id="BDg-R0-Rsj" customClass="TextViewViewController" customModule="UIKITLern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h1s-mv-qfH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XPi-Y9-8Mt">
+                                <rect key="frame" x="20" y="224" width="374" height="448"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text"> Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.                  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrM-Nm-lu4">
+                                <rect key="frame" x="20" y="121" width="11" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2ks-Fz-iCk"/>
+                        <color key="backgroundColor" red="0.18823529411764706" green="0.91402154611844721" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2ks-Fz-iCk" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="CrM-Nm-lu4" secondAttribute="trailing" constant="383" id="EAX-fc-LuC"/>
+                            <constraint firstItem="2ks-Fz-iCk" firstAttribute="trailing" secondItem="XPi-Y9-8Mt" secondAttribute="trailing" constant="20" id="FRT-Nz-SbE"/>
+                            <constraint firstItem="CrM-Nm-lu4" firstAttribute="leading" secondItem="2ks-Fz-iCk" secondAttribute="leading" constant="20" id="I1z-QC-fid"/>
+                            <constraint firstItem="XPi-Y9-8Mt" firstAttribute="leading" secondItem="2ks-Fz-iCk" secondAttribute="leading" constant="20" id="IPf-GO-i23"/>
+                            <constraint firstItem="XPi-Y9-8Mt" firstAttribute="centerX" secondItem="h1s-mv-qfH" secondAttribute="centerX" id="LCE-1E-tOk"/>
+                            <constraint firstItem="CrM-Nm-lu4" firstAttribute="top" secondItem="2ks-Fz-iCk" secondAttribute="top" constant="77" id="gah-vA-PYs"/>
+                            <constraint firstItem="XPi-Y9-8Mt" firstAttribute="height" secondItem="h1s-mv-qfH" secondAttribute="height" multiplier="0.5" id="kq3-bH-YkZ"/>
+                            <constraint firstItem="XPi-Y9-8Mt" firstAttribute="centerY" secondItem="h1s-mv-qfH" secondAttribute="centerY" id="sZC-Nk-wqR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="CrM-Nm-lu4" id="VR4-4h-0QK"/>
+                        <outlet property="textView" destination="XPi-Y9-8Mt" id="uJm-G3-fER"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3K-sN-Cm0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2555.072463768116" y="83.705357142857139"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
