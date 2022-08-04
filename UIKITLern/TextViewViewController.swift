@@ -68,4 +68,8 @@ extension TextViewViewController: UITextViewDelegate {
         textView.backgroundColor = self.view.backgroundColor
         textView.textColor = .black
     }
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        countLabel.text = "\(textView.text.count)"
+        return true
+    }
 }
