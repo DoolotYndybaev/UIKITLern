@@ -14,8 +14,13 @@ class TextViewViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        textView.isHidden = true
+        textView.alpha = 0
         
         textView.delegate = self
         
@@ -38,14 +43,29 @@ class TextViewViewController: UIViewController {
         stepper.tintColor = .white
         stepper.backgroundColor = .gray
         stepper.layer.cornerRadius = 5
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.color = .black
+        activityIndicator.startAnimating()
+        
+        self.view.isUserInteractionEnabled = false
+        
+        UIView.animate(withDuration: 0, delay: 3, options: .allowAnimatedContent) {
+            self.textView.alpha = 1
+        } completion: { (finished) in
+            self.activityIndicator.stopAnimating()
+            self.textView.isHidden = false
+            
+            self.view.isUserInteractionEnabled = true
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true) // Скрытие клавиатуры для любого обьекта
-        
         //        textView.resignFirstResponder() // Скрытие клав-ы для конткретного обьекта
     }
+    
     @objc func updateTextView(notification: Notification) {
         guard let userInfo = notification.userInfo as? [String: Any],
               let keyBoardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
