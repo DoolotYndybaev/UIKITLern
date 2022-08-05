@@ -16,11 +16,12 @@ class TextViewViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var progressView: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         textView.isHidden = true
-        textView.alpha = 0
         
         textView.delegate = self
         
@@ -50,13 +51,16 @@ class TextViewViewController: UIViewController {
         
         self.view.isUserInteractionEnabled = false
         
-        UIView.animate(withDuration: 0, delay: 3, options: .allowAnimatedContent) {
-            self.textView.alpha = 1
-        } completion: { (finished) in
-            self.activityIndicator.stopAnimating()
-            self.textView.isHidden = false
-            
-            self.view.isUserInteractionEnabled = true
+        self.progressView.setProgress(0, animated: true)
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
+            if self.progressView.progress != 1 {
+                self.progressView.progress += 0.2
+            } else {
+                self.activityIndicator.stopAnimating()
+                self.textView.isHidden = false
+                self.view.isUserInteractionEnabled = true
+                self.progressView.isHidden = true
+            }
         }
     }
     
